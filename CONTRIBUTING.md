@@ -27,3 +27,69 @@ Antes de enviar cambios al archivo `README.md`, es importante comprobar que su c
 3. Cambiar el tema a **Dark**.
 4. Regresar al README y comprobar que el texto, los enlaces y las imágenes sean legibles.
 5. Repetir la comprobación con el tema **Light** para verificar que el contenido se visualice correctamente en ambos modos.
+
+## Ramas y commits
+
+### Ramas del proyecto
+
+Las ramas deben utilizarse para organizar el trabajo y facilitar la revisión de los cambios antes de integrarlos en la rama principal.
+
+| Rama | Propósito |
+|---|---|
+| `main` | Rama principal del proyecto. Contiene la versión estable. |
+| `feat/*` | Desarrollo de nuevas funcionalidades. |
+| `fix/*` | Corrección de errores. |
+| `docs/*` | Cambios en la documentación. |
+| `test/*` | Incorporación o modificación de pruebas. |
+| `chore/*` | Tareas de mantenimiento y configuración. |
+
+Los nombres de las ramas deben seguir el formato `tipo/descripcion`. La descripción debe ser breve, clara y utilizar guiones para separar las palabras.
+
+### Mensajes de commit
+
+Los mensajes de commit deben seguir el formato `tipo: descripción`. El tipo identifica la naturaleza del cambio y la descripción resume brevemente el trabajo realizado.
+
+| Tipo | Propósito |
+|---|---|
+| `docs` | Cambios en la documentación. |
+| `feat` | Incorporación de funcionalidades. |
+| `chore` | Tareas de mantenimiento y configuración. |
+| `test` | Cambios relacionados con pruebas. |
+| `fix` | Corrección de errores. |
+
+Ejemplos de mensajes de commit:
+
+```text
+docs: documentar las normas de contribución
+feat: agregar registro de estudiantes
+fix: corregir error de validación
+```
+
+### Configuración de Git
+
+Para que los commits puedan atribuirse correctamente a tu cuenta de GitHub, configura `user.name` y `user.email`. Utiliza una dirección de correo vinculada y verificada en tu cuenta de GitHub.
+
+```bash
+git config --global user.name "Tu nombre"
+git config --global user.email "tu-correo-vinculado@ejemplo.com"
+```
+
+Sustituye los valores de ejemplo por tus datos. Puedes comprobar la configuración con:
+
+```bash
+git config --global user.name
+git config --global user.email
+```
+## Reglas de edición del README
+
+Para mantener organizada la documentación del repositorio, se deben seguir estas reglas al modificar los archivos `README.md` y `README.en.md`:
+
+1. **Marcadores de sección:** El marcador `<!-- seccion:X -->` identifica una sección del README. La letra `X` representa el nombre o identificador de esa sección. Se deben respetar estos marcadores para mantener la estructura del documento.
+
+2. **Bloques automáticos:** El marcador `<!-- auto:X -->` indica el inicio de un bloque generado automáticamente y `<!-- /auto:X -->` indica su final. Nunca se debe editar manualmente el contenido que se encuentra entre ambos marcadores.
+
+3. **Una sección por Pull Request:** Cada PR debe modificar únicamente una sección del README, evitando cambios en otras partes del documento.
+
+4. **Consistencia entre idiomas:** Los archivos `README.md` y `README.en.md` deben contener las mismas secciones y mantener el mismo orden, aunque estén escritos en idiomas diferentes.
+
+5. **Revisión de cambios:** Antes de enviar un PR, se debe comprobar que los marcadores se hayan respetado y que solamente se haya modificado la sección correspondiente.
