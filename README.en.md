@@ -21,7 +21,6 @@
 <!-- seccion:carrera -->
 ## 🎓 About us
 <!-- auto:cifras -->
-Información actualizada para el bloque **cifras** (en). Total repos: 2
 <!-- /auto:cifras -->
 
 <!-- seccion:carrera -->
@@ -56,15 +55,12 @@ Our community in numbers: the free software we build together, faculty and stude
 <!-- /seccion:carreras -->
 
 <!-- auto:proyectos -->
-Información actualizada para el bloque **proyectos** (en). Total repos: 2
 <!-- /auto:proyectos -->
 
 <!-- auto:lenguajes -->
-Información actualizada para el bloque **lenguajes** (en). Total repos: 2
 <!-- /auto:lenguajes -->
 
 <!-- auto:colaboradores -->
-Información actualizada para el bloque **colaboradores** (en). Total repos: 2
 <!-- /auto:colaboradores -->
 
 <!-- auto:participar -->
@@ -85,6 +81,12 @@ All our projects are institutional free software released under the MIT license,
 <!-- /seccion:proyectos -->
 
 <!-- seccion:lenguajes -->
+## 💻 Languages
+
+The percentages below show the distribution of code by programming language across all public projects.
+
+<!-- auto:lenguajes -->
+<!-- /auto:lenguajes -->
 <!-- /seccion:lenguajes -->
 
 <!-- seccion:colaboradores -->
