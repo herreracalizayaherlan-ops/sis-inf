@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import re
 from datetime import datetime
 
 SIN_DATO = "—"
@@ -31,9 +32,17 @@ TEXTOS: dict[str, dict[str, str]] = {
 }
 
 
+SALTOS_DE_LINEA = re.compile(r"\s*[\r\n\v\f\u0085\u2028\u2029]+\s*")
+
+
 def _escapar(valor: object) -> str:
-    """Escapa las barras verticales para conservar las columnas Markdown."""
-    return str(valor).replace("|", r"\|")
+    """Normaliza los saltos de línea y escapa las barras verticales.
+
+    Los saltos de línea internos se reemplazan por un espacio simple y las
+    barras verticales se escapan, para conservar las columnas Markdown.
+    """
+    texto = SALTOS_DE_LINEA.sub(" ", str(valor).strip())
+    return texto.replace("|", r"\|")
 
 
 def _obtener_fecha(fecha: str | None) -> str:

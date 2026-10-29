@@ -1,4 +1,4 @@
-# Guía de contribución
+# Cómo contribuir al perfil de SIS-INF
 
 ## Cómo previsualizar el README
 
@@ -94,6 +94,32 @@ Para mantener organizada la documentación del repositorio, se deben seguir esta
 4. **Consistencia entre idiomas:** Los archivos `README.md` y `README.en.md` deben contener las mismas secciones y mantener el mismo orden, aunque estén escritos en idiomas diferentes.
 
 5. **Revisión de cambios:** Antes de enviar un PR, se debe comprobar que los marcadores se hayan respetado y que solamente se haya modificado la sección correspondiente.
+
+## Cómo proponer un cambio
+
+Todo cambio en el repositorio parte de una issue y se integra mediante un Pull Request. Sigue estos pasos para proponer una contribución:
+
+1. **Elegir una issue:** Revisa las [issues abiertas](https://github.com/sis-inf/sis-inf/issues) y elige una que no tenga responsable asignado. Las etiquetadas como `good-first-issue` son adecuadas para empezar.
+2. **Solicitar la asignación:** Comenta en la issue que deseas trabajar en ella y espera a que un responsable del repositorio te la asigne antes de comenzar.
+3. **Crear la rama:** Crea la rama de trabajo con el nombre indicado en la issue, a partir de la rama base que se especifique en ella. Si la issue no indica un nombre, sigue el formato `tipo/descripcion` descrito en [Ramas del proyecto](#ramas-del-proyecto).
+
+   ```bash
+   git switch dev
+   git pull
+   git switch -c docs/descripcion-breve
+   ```
+
+4. **Realizar el cambio:** Modifica únicamente los archivos indicados en la issue y comprueba que se cumplan sus criterios de aceptación.
+5. **Hacer commit y subir la rama:** Redacta los mensajes de commit según el formato descrito en [Mensajes de commit](#mensajes-de-commit) y sube la rama a GitHub.
+
+   ```bash
+   git add CONTRIBUTING.md
+   git commit -m "docs: descripción breve del cambio"
+   git push -u origin docs/descripcion-breve
+   ```
+
+6. **Abrir el Pull Request:** Abre el PR contra `dev`, salvo que la issue indique otra rama de destino. Completa la plantilla del PR e incluye en la descripción la línea `Closes #N`, donde `N` es el número de la issue, para que esta se cierre automáticamente al integrar los cambios.
+7. **Atender la revisión:** Responde a las observaciones de los revisores y sube las correcciones a la misma rama; el PR se actualizará automáticamente. El proceso de integración se describe en [Revisión y merge de Pull Requests](#revisión-y-merge-de-pull-requests).
 
 ## Revisión y merge de Pull Requests
 
